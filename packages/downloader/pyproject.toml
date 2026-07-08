@@ -1,0 +1,18 @@
+[project]
+name = "downloader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+downloader = "downloader:main"
+downloader-run = "downloader.run:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

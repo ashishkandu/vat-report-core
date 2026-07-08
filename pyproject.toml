@@ -1,0 +1,35 @@
+[project]
+name = "vat-report"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = ["shared", "downloader", "restorer", "dbkit", "reporting", "nepalidates", "file_operations", "ird_client", "drive", "cli", "uploader", "mailer"]
+
+[tool.uv.sources]
+shared = { workspace = true}
+downloader = { workspace = true}
+restorer = { workspace = true}
+dbkit = { workspace = true}
+reporting = { workspace = true}
+nepalidates = { workspace = true}
+file_operations = { workspace = true}
+ird_client = { workspace = true}
+drive = { workspace = true}
+cli = { workspace = true }
+uploader = { workspace = true }
+mailer = { workspace = true}
+
+[project.scripts]
+vat-report = "vat_report:main"
+vat-cli = "cli.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = ["packages/*"]

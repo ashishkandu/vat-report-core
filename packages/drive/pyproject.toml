@@ -1,0 +1,21 @@
+[project]
+name = "drive"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "google-api-python-client>=2.169.0",
+    "google-auth-oauthlib>=1.2.2",
+    "pydantic>=2.11.4",
+]
+
+[project.scripts]
+drive = "drive:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

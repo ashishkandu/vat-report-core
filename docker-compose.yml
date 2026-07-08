@@ -1,0 +1,21 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "${DB_PASSWORD?Error: DB_PASSWORD is not defined.}"
+      TZ: "Asia/Kathmandu"
+    ports:
+      - "1433:1433"
+    healthcheck:  # Add a healthcheck to ensure the database is ready
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "${SA_PASSWORD}", "-Q", "SELECT 1"]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+    volumes:
+      - mssql_data:/var/opt/mssql
+      - ./data/backups:/var/opt/mssql/backups  # Mount for .bak files
+
+volumes:
+  mssql_data:

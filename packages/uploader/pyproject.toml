@@ -1,0 +1,17 @@
+[project]
+name = "uploader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+uploader = "uploader:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,20 @@
+[project]
+name = "restorer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pyodbc>=5.2.0",
+    "sqlalchemy>=2.0.40",
+]
+
+[project.scripts]
+restorer = "restorer:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

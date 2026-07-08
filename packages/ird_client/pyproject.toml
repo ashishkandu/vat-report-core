@@ -1,0 +1,19 @@
+[project]
+name = "ird-client"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ashish Kandu", email = "ashishkandu43@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+ird-client = "ird_client:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

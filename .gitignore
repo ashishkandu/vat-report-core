@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# data backup dir
+data/backups
+data/downloads
+data/reports
+
+# secrets
+.gdrive_tokens/
+*secrets.json
+*token.json
+*service_account.json
+.secrets
+.vars
+
+.env
+
+# logs
+*.log
